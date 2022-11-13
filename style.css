@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: calc(10px + 0.5vh);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: "sidebar header header"
+                         "sidebar main   right-side";
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #03CEA4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: calc(10px + 1.5vh);
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    padding: 10px 0 0 30px;
+}
+
+.sidebar-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sidebar-options li{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.help-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.help-options li{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header {
+    padding: calc(10px + 1vh);
+    grid-area: header;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 5px rgba(110, 110, 110, 0.3);
+}
+
+.header-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1vw;
+}
+
+.search , .bell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header button {
+    border: none;
+    background-color: transparent;
+}
+
+.header input {
+    border: none;
+    background-color: rgb(235, 235, 235);
+    border-radius: 20px;
+    padding: 4px 0;
+    width: calc(100px + 30vw);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-logo p {
+    font-weight: 600;
+}
+
+.header-logo span {
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1vw;
+}
+
+.header-nav nav ul {
+    display: flex;
+    gap: 12px;
+    list-style-type: none;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.header-nav nav ul li {
+    background-color: #03CEA4;
+    color: white;
+    border-radius: 20px;
+    padding: 7px;
+    width: 70px;
+    text-align: center;
+}
+
+.header-mini-logo {
+    height: 20px;
+    width: auto;
+}
+
+.cat-logo {
+    min-height: 55px;
+    width: 55px;
+}
+
+.main {
+    grid-area: main; 
+    background-color: #D7AF70;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 15px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+.card {
+    background-color: rgb(255, 253, 247);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border-left: 8px solid #720E07;
+    box-shadow: 0 5px 5px rgba(110, 110, 110, 0.3);
+}
+
+.card .tools {
+    align-self: flex-end;
+    border: none;
+    background-color: transparent;
+}
+
+.card .tools button {
+    border: none;
+    background-color: transparent;
+}
+
+.right-side {
+    grid-area: right-side;
+    background-color: #D7AF70;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.announc-card {
+    background-color: rgb(255, 253, 247);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+.announc-card .announc {
+    border-bottom: 1px solid rgb(223, 222, 222);
+}
+
+.announc-card .announc:last-child {
+    border-bottom: none;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.trending-card {
+    background-color: rgb(255, 253, 247);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
